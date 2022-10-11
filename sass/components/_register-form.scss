@@ -1,21 +1,12 @@
-.register-form {    
-
+.register-form {
     &__title {
     display: block;
     text-align: center;
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1.15;
     letter-spacing: 0.03em;
-
-    // @media screen (max-width: 479px) {
-    // font-size: 18px;    
-    // }
-
-    @media screen and (min-width: 1200px) {
-    line-height: 1.15;   
-    }
     }
         
     &__group {
@@ -72,15 +63,10 @@
         
     &__desc {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;    
-    color: var(--secondary-color);
-    
-    @media screen and (min-width: 1200px) {
     font-size: 14px;
-    line-height: 1.71;   
-    }
+    line-height: 1.71;
+    letter-spacing: 0.03em;    
+    color: var(--secondary-color);    
     }
         
     &__heading {
@@ -142,7 +128,7 @@
     opacity: 0;
     }
     
-   &__btn {    
+   &__btn {
     display: block;
     margin: 0 auto;
     width: 200px;

@@ -1,15 +1,7 @@
-.filters {    
-display: flex;
-flex-wrap: wrap;
-gap: 8px;
-margin-bottom: 40px;
-        
-
-@media screen and (min-width: 768px) {
+.filters {
 display: flex;
 justify-content: center;
-margin-bottom: 50px;    
-}
+margin-bottom: 50px;
 
     &__btn {
     border: none;
@@ -24,7 +16,7 @@ margin-bottom: 50px;
     padding: 6px 22px;
     display: inline-block;
     min-width: 73px;
-    margin-right: 8px;      
+    margin-right: 8px;
     
     transition-property: color, background-color;
     transition-duration: 250ms;
@@ -41,7 +33,6 @@ margin-bottom: 50px;
 }   
     
     .btn-all {
-    padding: 6px 25px;  
-    
+    padding: 6px 25px;
     }
     

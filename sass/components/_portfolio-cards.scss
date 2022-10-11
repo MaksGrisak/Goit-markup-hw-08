@@ -3,7 +3,7 @@ background-color: var(--hero-color);
 }
 
 .portfolio {
-    
+
     &__cards {
     background: #FFFFFF;
     border-top: 1px solid #EEEEEE;
@@ -11,25 +11,16 @@ background-color: var(--hero-color);
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     padding: 20px 24px 20px 24px;
-
-    @media screen and (min-width: 1200px) {
-    // flex-basis: calc((100% - 30px) / 3);
-        
-    }
-    
     } 
     
-    &__link {    
+    &__link {
+    // display: block;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-
-
     @media screen and (min-width: 1200px) {
-    // display: block;
-    // display: flex;
-    // flex-direction: column;       
+    display: block;    
     }
     }
 
@@ -43,16 +34,6 @@ background-color: var(--hero-color);
     transform: translateY(0);
     opacity: 1;    
     }
-
-    &__img {
-        @media screen and (max-width: 767px) {
-        width: 100%;    
-        }
-    }
-
-    // &__cards {
-    // flex-grow: 1;
-    // }
 }   
     
     .project-name {
@@ -72,37 +53,24 @@ background-color: var(--hero-color);
     }
     
     .works {
-    @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-    }
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 30px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;    
     }
-
     }
     
     .work-list {
-        @media screen and (max-width: 767px) {
-        margin-bottom: 30px;    
-        }
-        
-        @media screen and (min-width: 768px) {
-        flex-basis: calc((100% - 30px) / 2);   
-        }
-        
-        @media screen and (min-width: 1200px) {
-        max-width: 370px;        
-        // flex-basis: calc((100% - 30px) / 3);    
-        }  
-    }
+    // width: 370px;
 
-    
+    @media screen and (min-width: 1200px) {
+    width: 370px;    
+    }
+    }
     
     .cards-overlay {
     position: relative;
