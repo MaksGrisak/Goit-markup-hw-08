@@ -457,12 +457,14 @@ img {
 }
 @media screen and (min-width: 768px) {
   .features__item {
-    max-width: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
-    max-width: 270px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 4);
+        flex-basis: calc((100% - 30px) / 4);
   }
 }
 .features__icon {
@@ -669,7 +671,6 @@ img {
   background-color: var(--primary-bkgcolor);
 }
 .clients__list {
-  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,22 +681,7 @@ img {
       flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (min-width: 1200px) {
-  .clients__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 30px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
 .clients__icon {
-  max-width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   fill: currentColor;
   -webkit-transition-property: color;
   transition-property: color;
@@ -709,13 +695,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 210px;
   border: 1px solid var(--social-links);
   border-radius: 4px;
   -webkit-transition-property: color, border;
@@ -724,10 +712,14 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .clients__link {
-    width: 226px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 3);
+        flex-basis: calc((100% - 30px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -811,13 +803,15 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__title {
-  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-bkgcolor);
+}
+.footer__mail {
+  width: 100%;
 }
 .footer__input {
   padding-left: 16px;
@@ -1064,7 +1058,13 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .portfolio__link {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .portfolio__link:hover, .portfolio__link:focus {
@@ -1080,6 +1080,11 @@ img {
   .portfolio__img {
     width: 100%;
   }
+}
+.portfolio__cards {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .project-name {
@@ -1115,6 +1120,16 @@ img {
             justify-content: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .works {
     display: -webkit-box;
@@ -1131,9 +1146,19 @@ img {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 768px) {
+  .work-list {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .work-list {
-    width: 370px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: calc((100% - 30px) / 3);
+        flex-basis: calc((100% - 30px) / 3);
   }
 }
 
@@ -1592,6 +1617,11 @@ input::placeholder {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+@media screen and (max-width: 479px) {
+  .menu-tel {
+    font-size: 26px;
+  }
+}
 
 .menu-mail {
   font-weight: 500;
@@ -1606,6 +1636,12 @@ input::placeholder {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+  padding: 0 10px;
   color: var(--link-active);
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 479px) {
+  .menu-socials {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */
