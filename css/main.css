@@ -56,7 +56,6 @@ ul {
 }
 
 .container {
-  outline: 2px solid red;
   padding: 0 15px 0 15px;
   margin-left: auto;
   margin-right: auto;
@@ -74,7 +73,6 @@ ul {
 }
 
 .section {
-  outline: 2px solid green;
   width: 100%;
   padding: 60px 0;
 }
@@ -580,6 +578,23 @@ img {
 .team {
   background-color: var(--light-bgk);
 }
+@media screen and (max-width: 678px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (min-width: 768px) {
   .team__list {
     display: -webkit-box;
@@ -720,7 +735,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 678px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -969,10 +984,21 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .filters__btn {
   border: none;
@@ -1040,6 +1066,11 @@ img {
           transform: translateY(0);
   opacity: 1;
 }
+@media screen and (max-width: 767px) {
+  .portfolio__img {
+    width: 100%;
+  }
+}
 
 .project-name {
   color: var(--primary-color);
@@ -1057,6 +1088,23 @@ img {
   margin-top: 4px;
 }
 
+@media screen and (max-width: 678px) {
+  .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .works {
     display: -webkit-box;
@@ -1068,6 +1116,11 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .work-list {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .work-list {
     width: 370px;

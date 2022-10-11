@@ -3,6 +3,7 @@ background-color: var(--hero-color);
 }
 
 .portfolio {
+    // display: flex;
 
     &__cards {
     background: #FFFFFF;
@@ -34,6 +35,12 @@ background-color: var(--hero-color);
     transform: translateY(0);
     opacity: 1;    
     }
+
+    &__img {
+        @media screen and (max-width: 767px) {
+        width: 100%;    
+        }
+    }
 }   
     
     .project-name {
@@ -53,9 +60,12 @@ background-color: var(--hero-color);
     }
     
     .works {
-    // display: flex;
-    // flex-wrap: wrap;
-    // gap: 30px;
+    @media screen and (max-width: 678px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    }
 
     @media screen and (min-width: 1200px) {
     display: flex;
@@ -65,7 +75,9 @@ background-color: var(--hero-color);
     }
     
     .work-list {
-    // width: 370px;
+    @media screen and (max-width: 767px) {
+    margin-bottom: 30px;    
+    }
 
     @media screen and (min-width: 1200px) {
     width: 370px;    
